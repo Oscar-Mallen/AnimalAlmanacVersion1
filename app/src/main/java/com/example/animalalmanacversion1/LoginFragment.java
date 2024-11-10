@@ -1,6 +1,5 @@
 package com.example.animalalmanacversion1;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +10,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 public class LoginFragment extends Fragment {
 
@@ -44,7 +45,7 @@ public class LoginFragment extends Fragment {
                 } else {
                     // Perform login
                     Toast.makeText(getActivity(), "Login Successful!", Toast.LENGTH_SHORT).show();
-                    // add code to navigate to next screen
+                    // Add code to navigate to the main screen or next screen here
                 }
             }
         });
@@ -52,9 +53,8 @@ public class LoginFragment extends Fragment {
         signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Handle navigation to sign-up screen here
-                // For instance, you could open a SignUpFragment or start a new SignUpActivity
-                Toast.makeText(getActivity(), "Navigate to Sign Up screen", Toast.LENGTH_SHORT).show();
+                NavController navController = Navigation.findNavController(v);
+                navController.navigate(R.id.action_loginFragment_to_signUpFragment);
             }
         });
 

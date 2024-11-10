@@ -4,17 +4,28 @@
     <item
         android:id="@+id/navigation_home"
         android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:title="@string/home" />
 
     <item
         android:id="@+id/navigation_saved"
         android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="Saved" />
+        android:title="@string/saved" />
 
-    <!-- Remove this item -->
-    <!--<item
+    <item
+        android:id="@+id/navigation_login"
+        android:icon="@drawable/baseline_login_24"
+        android:title="@string/login" />
+
+    <item
+        android:id="@+id/navigation_signup"
+        android:icon="@drawable/baseline_account_box_24"
+        android:title="@string/sign_up" />
+
+    <!-- Optional: Commented out item for future use
+    <item
         android:id="@+id/navigation_notifications"
         android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Logout" />-->
+        android:title="Logout" />
+    -->
 
 </menu>
