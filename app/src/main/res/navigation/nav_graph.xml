@@ -4,21 +4,24 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/loginFragment">
 
-    <!-- Login Fragment -->
+    <!-- Define LoginFragment -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.animalalmanacversion1.LoginFragment"
         android:label="LoginFragment">
-
-        <!-- Action to navigate to SignUpFragment -->
+        <!-- Action to navigate from LoginFragment to SignUpFragment -->
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
 
-    <!-- Sign Up Fragment -->
+    <!-- Define SignUpFragment -->
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.animalalmanacversion1.SignUpFragment"
         android:label="SignUpFragment" />
+
+    <!-- If you want to add more fragments -->
+    <!-- Add additional fragment definitions here -->
+
 </navigation>
