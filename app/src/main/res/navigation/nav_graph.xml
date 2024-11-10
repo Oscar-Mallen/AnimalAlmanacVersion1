@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph"
+    xmlns:tools="http://schemas.android.com/tools"
     app:startDestination="@id/loginFragment">
-
-    <!-- Login Fragment -->
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.example.animalalmanacversion1.LoginFragment"
-        android:label="LoginFragment">
-
-        <!-- Action to navigate to SignUpFragment -->
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_signUpFragment"
             app:destination="@id/signUpFragment" />
     </fragment>
 
-    <!-- Sign Up Fragment -->
     <fragment
         android:id="@+id/signUpFragment"
         android:name="com.example.animalalmanacversion1.SignUpFragment"
-        android:label="SignUpFragment" />
+        tools:layout="@layout/fragment_sign_up" />
 </navigation>
