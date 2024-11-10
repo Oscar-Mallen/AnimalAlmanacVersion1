@@ -14,11 +14,6 @@ import androidx.fragment.app.Fragment;
 
 public class SignUpFragment extends Fragment {
 
-    private EditText usernameEditText;
-    private EditText passwordEditText;
-    private EditText confirmPasswordEditText;
-    private Button createAccountButton;
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
@@ -27,23 +22,18 @@ public class SignUpFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
 
         // Initialize views
-        usernameEditText = view.findViewById(R.id.username);
-        passwordEditText = view.findViewById(R.id.password);
-        confirmPasswordEditText = view.findViewById(R.id.confirm_password);
-        createAccountButton = view.findViewById(R.id.create_account_button);
+        EditText usernameEditText = view.findViewById(R.id.username);
+        EditText passwordEditText = view.findViewById(R.id.password);
+        EditText confirmPasswordEditText = view.findViewById(R.id.confirm_password);
+        Button createAccountButton = view.findViewById(R.id.create_account_button);
 
         // Set up the Create Account button click listener
-        createAccountButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                handleSignUp();
-            }
-        });
+        createAccountButton.setOnClickListener(v -> handleSignUp(usernameEditText, passwordEditText, confirmPasswordEditText));
 
         return view;
     }
 
-    private void handleSignUp() {
+    private void handleSignUp(EditText usernameEditText, EditText passwordEditText, EditText confirmPasswordEditText) {
         // Get the values from the EditText fields
         String username = usernameEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
