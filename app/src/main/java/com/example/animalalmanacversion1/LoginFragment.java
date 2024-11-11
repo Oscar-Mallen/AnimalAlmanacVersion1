@@ -54,7 +54,7 @@ public class LoginFragment extends Fragment {
             Log.d(TAG, "Sign-Up button clicked!");
 
             try {
-                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+                NavController navController = Navigation.findNavController(v);
                 navController.navigate(R.id.action_loginFragment_to_signUpFragment);
                 Log.d(TAG, "Navigating to SignUpFragment");
             } catch (Exception e) {
