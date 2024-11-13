@@ -19,6 +19,8 @@
     <string name="saved">Saved</string>
     <string name="login">Login</string>
     <string name="sign_up">Sign Up</string>
+    <string name="Back_to_Login">Back To Login</string>
+
 
 
 </resources>
