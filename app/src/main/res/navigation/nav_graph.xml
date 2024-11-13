@@ -22,6 +22,10 @@
         android:label="SignUpFragment" />
 
     <!-- If you want to add more fragments -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.animalalmanacversion1.HomeFragment"
+        android:label="SignUpFragment" />
     <!-- Add additional fragment definitions here -->
 
 </navigation>
