@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Define the rounded corners -->
+    <corners android:radius="16dp" />
+
+    <!-- Set the border thickness and color -->
+    <stroke
+        android:width="2dp"
+        android:color="#D1DDD1" />
+
+    <!-- Background color for the drawable -->
+    <solid android:color="@android:color/white" />
+
+    <!-- Define padding for the shape -->
+    <padding
+        android:left="8dp"
+        android:top="8dp"
+        android:right="8dp"
+        android:bottom="8dp" />
+</shape>
