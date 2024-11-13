@@ -26,11 +26,10 @@
         android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/animal_description"
+        android:id="@+id/animal_scientific_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Animal Description"
-        android:textSize="14sp"
-        android:textAlignment="center" />
+        android:text="Scientific Name"
+        android:textSize="14sp" />
+
 </LinearLayout>

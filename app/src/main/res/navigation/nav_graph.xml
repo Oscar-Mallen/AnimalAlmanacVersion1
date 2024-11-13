@@ -25,7 +25,15 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.animalalmanacversion1.HomeFragment"
-        android:label="SignUpFragment" />
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_animalDetailFragment"
+            app:destination="@id/animalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/animalDetailFragment"
+        android:name="com.example.animalalmanacversion1.AnimalDetailFragment"
+        android:label="AnimalDetailFragment" />
     <!-- Add additional fragment definitions here -->
 
 </navigation>
