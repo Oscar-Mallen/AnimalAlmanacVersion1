@@ -6,6 +6,32 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:paddingBottom="14dp">
+
+        <Button
+            android:id="@+id/buttonNav3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/buttonNav1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log-Out" />
+    </LinearLayout>
+
+
     <!-- Animal of the Day Section -->
     <TextView
         android:id="@+id/animal_of_day_text"

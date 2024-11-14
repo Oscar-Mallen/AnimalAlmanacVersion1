@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -52,6 +53,23 @@ public class HomeFragment extends Fragment {
                 NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
                 navController.navigate(R.id.action_homeFragment_to_animalDetailFragment, bundle);
             }
+        });
+
+        Button savedButton = rootView.findViewById(R.id.buttonNav3);
+
+        // Set up the click listener for the Saved button
+        savedButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to the SavedFragment when the button is clicked
+                NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.savedFragment); // Ensure the savedFragment is in the nav graph
+            }
+        });
+        Button logoutButton = rootView.findViewById(R.id.buttonNav1);
+        logoutButton.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.action_homeFragment_to_loginFragment);
         });
 
         return rootView;

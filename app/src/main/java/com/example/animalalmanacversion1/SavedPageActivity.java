@@ -29,6 +29,15 @@ private ActivitySavedPageBinding binding;
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+        // LISTENER FOR HOME BUTTON NAVIGATION
+        binding.homebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // navigate back with the controller
+                navController.navigate(R.id.action_savedFragment_to_homeFragment);
+            }
+        });
+
         binding.savedtitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
