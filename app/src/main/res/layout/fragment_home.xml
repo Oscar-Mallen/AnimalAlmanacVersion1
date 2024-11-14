@@ -13,16 +13,22 @@
         android:gravity="center_horizontal"
         android:paddingBottom="14dp">
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-        <!-- Third Navigation Button -->
         <Button
             android:id="@+id/buttonNav3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Saved" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/buttonNav1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log-Out" />
     </LinearLayout>
 
 

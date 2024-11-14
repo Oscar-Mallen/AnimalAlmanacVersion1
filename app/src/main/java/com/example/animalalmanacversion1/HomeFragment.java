@@ -66,6 +66,11 @@ public class HomeFragment extends Fragment {
                 navController.navigate(R.id.savedFragment); // Ensure the savedFragment is in the nav graph
             }
         });
+        Button logoutButton = rootView.findViewById(R.id.buttonNav1);
+        logoutButton.setOnClickListener(v -> {
+            NavController navController = Navigation.findNavController(requireActivity(), R.id.nav_host_fragment);
+            navController.navigate(R.id.action_homeFragment_to_loginFragment);
+        });
 
         return rootView;
     }
