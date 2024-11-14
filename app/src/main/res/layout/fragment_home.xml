@@ -13,15 +13,6 @@
         android:gravity="center_horizontal"
         android:paddingBottom="14dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Welcome To Animalmanac!"
-            android:textColor="@android:color/black"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:paddingBottom="8dp" />
-
         <Space
             android:layout_width="0dp"
             android:layout_height="wrap_content"
