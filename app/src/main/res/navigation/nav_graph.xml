@@ -25,7 +25,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.animalalmanacversion1.HomeFragment"
-        android:label="SignUpFragment" >
+        android:label="HomeFragment" >
         <action
             android:id="@+id/action_homeFragment_to_animalDetailFragment"
             app:destination="@id/animalDetailFragment" />
@@ -44,10 +44,16 @@
         android:id="@+id/savedFragment"
         android:name="com.example.animalalmanacversion1.SavedFragment"
         android:label="SavedFragment"
-        tools:layout="@layout/fragment_saved" />
-    <action
-        android:id="@+id/action_savedFragment_to_homeFragment"
-        app:destination="@id/homeFragment" />
+        tools:layout="@layout/fragment_saved">
+        <action
+            android:id="@+id/action_savedFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_savedFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
 
 
     <!-- Add additional fragment definitions here -->

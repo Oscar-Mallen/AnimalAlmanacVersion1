@@ -3,10 +3,13 @@ package com.example.animalalmanacversion1;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -56,9 +59,32 @@ public class SavedFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saved, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        // inflate fragment layout
+        View rootView = inflater.inflate(R.layout.fragment_saved, container, false);
+
+        NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+
+        Button navigateToHomeButton = rootView.findViewById(R.id.navigateToHomeButton);
+        navigateToHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to HomeFragment using the action defined in the nav graph
+                navController.navigate(R.id.action_savedFragment_to_homeFragment);
+            }
+        });
+
+        Button logoutButton = rootView.findViewById(R.id.logoutbutton);
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Navigate to LoginFragment (Log-Out action)
+                navController.navigate(R.id.action_savedFragment_to_loginFragment);
+            }
+        });
+
+        // Return the inflated root view
+        return rootView;
     }
+
 }
