@@ -41,6 +41,10 @@
         android:name="com.example.animalalmanacversion1.SavedFragment"
         android:label="SavedFragment"
         tools:layout="@layout/fragment_saved" />
+    <action
+        android:id="@+id/action_savedFragment_to_homeFragment"
+        app:destination="@id/homeFragment" />
+
 
     <!-- Add additional fragment definitions here -->
 </navigation>
