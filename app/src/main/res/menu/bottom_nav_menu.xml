@@ -12,14 +12,11 @@
         android:title="@string/saved" />
 
     <item
-        android:id="@+id/navigation_login"
+        android:id="@+id/navigation_logout"
         android:icon="@drawable/baseline_login_24"
-        android:title="@string/login" />
+        android:title="Logout" />
 
-    <item
-        android:id="@+id/navigation_signup"
-        android:icon="@drawable/baseline_account_box_24"
-        android:title="@string/sign_up" />
+
 
     <!-- Optional: Commented out item for future use
     <item
